@@ -1,0 +1,14 @@
+{
+   "items" : [
+      {
+         "apiVersion" : "batch/v1",
+         "kind" : "Job",
+         "metadata" : {
+            "namespace" : "my-namespace",
+            "name" : "existing"
+         }
+      }
+   ],
+   "kind" : "List",
+   "apiVersion" : "v1"
+}
