@@ -20,6 +20,10 @@ import (
 	"github.com/juju/errors"
 )
 
+var (
+	ownerKind = flag.String("owner-kind", "job", "filter by ownerReference kind")
+)
+
 type list struct {
 	Items []*resource `json:"items"`
 }
@@ -89,10 +93,12 @@ func (s store) orphans() list {
 	for _, r := range s {
 		if len(r.Metadata.OwnerReferences) == 1 {
 			owner := r.Metadata.OwnerReferences[0]
-			k := owner.key(r.Metadata.Namespace)
+			if owner.Kind == *ownerKind {
+				k := owner.key(r.Metadata.Namespace)
 
-			if _, ok := s[k]; !ok {
-				res.Items = append(res.Items, r)
+				if _, ok := s[k]; !ok {
+					res.Items = append(res.Items, r)
+				}
 			}
 		}
 	}
