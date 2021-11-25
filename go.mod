@@ -2,7 +2,7 @@ module github.com/mmikulicic/k8s-offline-gc
 
 go 1.17
 
-require github.com/juju/errors v0.0.0-20200330140219-3fe23663418f
+require github.com/juju/errors v0.0.0-20210818161939-5560c4c073ff
 
 require (
 	github.com/juju/testing v0.0.0-20210324180055-18c50b0c2098 // indirect
