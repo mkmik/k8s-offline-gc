@@ -1,6 +1,6 @@
 module github.com/mmikulicic/k8s-offline-gc
 
-go 1.17
+go 1.19
 
 require github.com/juju/errors v0.0.0-20220324005906-d8c5072c94ab
 
