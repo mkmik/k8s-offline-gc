@@ -1,2 +1,1 @@
-go get github.com/mmikulicic/k8s-offline-gc
-go doc github.com/mmikulicic/k8s-offline-gc
+go install github.com/mmikulicic/k8s-offline-gc@latest
