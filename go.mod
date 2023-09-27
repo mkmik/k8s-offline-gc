@@ -1,4 +1,4 @@
-module github.com/mmikulicic/k8s-offline-gc
+module github.com/mkmik/k8s-offline-gc
 
 go 1.17
 
